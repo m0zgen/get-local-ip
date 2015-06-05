@@ -1,2 +1,2 @@
 # get-local-ip
-Script show local IP address
+Example script - get and show local IP address
