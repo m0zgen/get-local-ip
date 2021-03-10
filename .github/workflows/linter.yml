@@ -5,9 +5,9 @@ name: Linter-Test
 # https://help.github.com/en/articles/workflow-syntax-for-github-actions
 on:
   push:
-    branches-ignore: [master]
+    branches: [ master ]
   pull_request:
-    branches: [master]
+    branches: [ master ]
 
 jobs:
   build:
