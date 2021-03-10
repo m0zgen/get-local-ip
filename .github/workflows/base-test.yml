@@ -12,6 +12,7 @@ on:
 jobs:
   initial_testing:
     runs-on: ubuntu-latest
+    needs: [Linter-Test]
 
     steps:
       - uses: actions/checkout@v2
@@ -24,11 +25,6 @@ jobs:
       - name: List folder data
         run: ls -la
 
-      - name: Lint Code Base
-        uses: github/super-linter@v3
-        env:
-          VALIDATE_BASH: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   run_script:
     runs-on: ubuntu-latest
