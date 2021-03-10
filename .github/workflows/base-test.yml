@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  my_runs:
+  my_testing:
     runs-on: ubuntu-latest
 
     steps:
