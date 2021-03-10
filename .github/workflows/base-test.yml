@@ -28,6 +28,7 @@ jobs:
         uses: github/super-linter@v3
         env:
           VALIDATE_BASH: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   run_script:
     runs-on: ubuntu-latest
