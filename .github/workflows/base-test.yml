@@ -25,6 +25,10 @@ jobs:
       - name: List folder data
         run: ls -la
 
+      - name: Run script
+        run: |
+          bash ./get-local-ip.sh
+
 
 
 
