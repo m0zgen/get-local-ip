@@ -10,7 +10,7 @@ on:
     branches: [ master ]
 
 jobs:
-  my_testing:
+  initial_testing:
     runs-on: ubuntu-latest
 
     steps:
@@ -25,6 +25,16 @@ jobs:
       - name: List folder data
         run: ls -la
 
+      - name: Lint Code Base
+        uses: github/super-linter@v3
+        env:
+          VALIDATE_BASH: true
+
+  run_script:
+    runs-on: ubuntu-latest
+    needs: [initial_testing]
+
+    steps:
       - name: Run script
         run: |
           bash ./get-local-ip.sh
